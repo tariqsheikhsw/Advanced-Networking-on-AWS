@@ -9,3 +9,5 @@ Reference Architectures for Implementing SD-WAN Solutions on AWS
 https://d1.awsstatic.com/architecture-diagrams/ArchitectureDiagrams/sd-wan-deployment-models-ra.pdf?did=wp_card&trk=wp_card
 
 
+
+![Alt text](https://www.youtube.com/watch?v=tob-I0karZw)
