@@ -15,4 +15,7 @@ https://d1.awsstatic.com/architecture-diagrams/ArchitectureDiagrams/sd-wan-deplo
 Cisco SD-WAN Cloud OnRamp with AWS Transit Gateway Connect 
 https://www.youtube.com/watch?v=tob-I0karZw
 
+Migrating SD-WAN Appliances to AWS Transit Gateway Connect
+https://aws.amazon.com/blogs/networking-and-content-delivery/migrating-sd-wan-appliances-to-aws-transit-gateway-connect/
+
 
