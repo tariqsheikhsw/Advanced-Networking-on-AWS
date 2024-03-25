@@ -172,7 +172,85 @@ accounts, AWS Regions, and VPCs to support different connectivity patterns.
     • SSL/TLS automatically terminates  
     
 
+### Transit Gateways
+
+   • Understand the steps on how to share resources using RAM across different accounts for a Transit Gateway  
+   • Understand Multicast Groups, especially with respect to IGMP(Internet Group Management Protocol) Multicast and static (API-based) sources. IGMP Multicast groups utilize UDP only and can be managed dynamically managed and members can send and receive data. Static groups utilize TCP and UDP but members can only receive traffic. If you are (Also see AWS re:Invent 2020: Using AWS Transit Gateway for your multicast workloads )  
+   • Remember non-nitro instance cannot be a Multicast sender  
+   • Know some of the Transit Gateway design best practices including that traffic might drop on a network if you have a Transit Gateway and a network appliance in the same subnet(or one of the Transit Gateway attachments).  
+   • You should know that Transit VPC is never a good choice as Transit Gateway is a managed service that scales elastically  
+   • BGP Routing can be helpful in configuring a global network with Direct Connect and Transit Gateway.  
+   See https://aws.amazon.com/blogs/networking-and-content-delivery/building-a-global-network-using-aws-transit-gateway-inter-region-peering/
   
+
+### Network Analysis Services:
+
+   • Reachability Analyzer is a configuration analysis tool that enables you to perform connectivity testing between a source resource and a destination resource in your virtual private clouds (VPCs). If the destination is not reachable, Reachability Analyzer identifies the blocking component. The source and destination resources must be in the same Region. (supports only resources with an IPv4 address). Transit gateway Connect attachments are not supported. Reachability Analyzer can find paths through at most two transit gateway route tables. To analyze paths through additional transit gateway route tables, use Route Analyzer.  
+   •  The Reachability Analyzer can also be used in automating connectivity checks that are triggered by security group changes. See Automating connectivity assessments with VPC Reachability Analyzer   
+   • Route Analyzer can perform an analysis of the routes in your transit gateway route tables. The source and destination must be transit gateway attachments. The Route Analyzer analyzes the routing path between a specified source and destination, and returns information about the connectivity between components. (IPv4 or IPv6). The Route Analyzer analyzes routes in transit gateway route tables only. It does not analyze routes in VPC route tables or in your customer gateway devices.  
+  •  Network Access Analyzer identifies unintended network access to your resources on AWS. You can use it to specify your network access requirements and identify potential network paths that do not meet your specified requirements. Possibly ensuring that production and development VPCs are isolated or which resources can be accessed by internet gateways.  
+  • Transit Gateway Network Analyzer provides a single global view of your private network.  
+
+### Miscellaneous Topics:
+
+  • AWS Global Accelerator is a networking service that provides static public IPs to act as a fixed entry point helping those devices that do not have access to dns resolution
+  • The Route 53 Resolver DNS Firewall has some configurations such as firewall-fail-open Route53 configuration to know the concept of favoring availability over security  
+  • Know that access to SQS from ECS or EC2 does not require any networking tasks such as route table configuration but simply the right IAM role, interface endpoint and security group  
+  • If you had an application (with a complex networking design) which was going into production in a matter of days and it needed to be integrated with a new webservice. It might be connecting to the web service via an interface VPC endpoint  
+  • Possibly you might have a customer that has a Direct Connect connection to Region A and Region B. There might be a Transit Gateway A in Region A that the on-premises location has access to and a VPC B in Region B connected to a Transit Gateway B. There could be a Direct Connect Gateway. Explore the ways to connect the on-premises location to VPC B. One could connect Transit Gateway A to Transit Gateway B or one could connect the customer’s Direct Connect Gateway to Transit Gateway B directly for connectivity to VPC B.  
+  • Understand that one way to capture traffic between Kubernetes Nodes could be to have the node flow log data sent to S3 and have the data queried with Athena. See Using VPC Flow Logs to capture and query EKS network communications  
+  • Flow logs delivered to OpenSearch (Real time application monitoring) with Kinesis Firehose is faster than Flow Logs simply to S3. See Stream VPC flow logs to Amazon OpenSearch Service via Amazon Kinesis Data Firehose  
+  • Review Monitoring Direct Connect with CloudWatch for monitoring performance issues with respect to both the Direct Connect physical connection and virtual interfaces  
+ • AWS Direct Connect Connection metrics:  
+- ConnectionPpsEgress — measures the packet rate for outbound data from the AWS side of the connection ) (Packets per second)  
+- ConnectionPpsIngress — measures the packet rate for inbound data to the AWS side of the connection (Packets per second)  
+- ConnectionBpsEgress — measures the bitrate(bits/second) for outbound data (Bits per second)  
+- ConnectionBpsIngress — measures the bitrate(bits/second) for inbound data (Bits per second)  
+• AWS Direct Connect virtual interface metrics:  
+- VirtualInterfaceBpsEgress, VirtualInterfaceBpsIngress, VirtualInterfacePpsEgress, VirtualInterfacePpsIngress  
+
+• AWS Network Firewall is a stateful, managed, network firewall and intrusion detection and prevention service for your virtual private cloud(VPC).   
+Network Firewall can perform deep packet inspection on traffic entering or leaving your VPC  
+• Route 53 Resolver DNS Firewall provides protection for outbound DNS requests from your VPC and help prevent DNS exfiltration of your data.  
+• Look into NAT gateway troubleshooting , including if the connection drops after 350 seconds, you can initiate more traffic over the connection or enable the TCP keepalive on the instance with a value less than 350 seconds. Might be useful for long running database queries.  
+• When Configuring a Transit VIF(Virtual Interface) to enable IPv6 you go under Additional settings, choose IPV6 and the peer IPv6 addresses are automatically assigned from Amazon’s pool of IPv6 addresses.  
+• When enabling outbound IPv6 traffic using an egress-only internet gateway you will:  
+    - Create the egress-only internet gateway  
+    - Create a custom route table (adding a route that sends traffic to the gateway and then associate it with your subnet)  
+• Review configuring a public VIF for IPv6  
+• PrivateLink can be used when creating a Network Load Balancer for the application in your VPC, create a VPC endpoint service configuration pointing to that load balancer. The service consumer will create an interface endpoint to the service.  
+• Review VPC Flow logs at a high level  
+• If you also want a breakdown on the different areas to study for the exam you should have a look at 10 study areas for the AWS Certified Advanced Networking — Specialty exam .  
+
+### Practice questions  
+
+Practice questions that involve the following topics can be given less focus in my opinion with respect to the current exam content. They may have been relevant previously but I don’t think so now. However, one could place the caveat that this material can still be beneficial if still on the AWS Certified Advanced Networking — Specialty (ANS-C01) Exam Guide They do provide content that is probably part of the networking specialty but maybe not as important now. These include questions involving:  
+
+    • MED vs AS PATH VPN preferences  
+    • WaveLength Zones or Outposts  
+    • DNS addressing, TimeSync Service or ENA Linux Kernel Drivers  
+    • Port hours or Data Transfer Out  
+    • Squid Proxy  
+    • Match Viewer  
+    • Url of retrieving Metadata http://169.254.169.254/latest/  
+    • email-smtp.ap-southeast-2.amazonaws.com:587  
+    • Transparent Data Encryption(TDE)  
+    • MINIMUM_IP_TARGET  
+    • Fragmented TCP Packets  
+    • Domain Name System Security Extensions (DNSSEC)  
+    • Nat Gateway charges  
+    • Network Time Protocol (NTP)/Amazon Time Sync Service  
+    • Cloud Map  
+    • Bidirectional Forwarding Detection (BFD)  
+
+As well, one could take note that some distractor or eliminatory words can be utilized to try and eliminate options from consideration to improve your chances of selecting the right response. These include:  
+
+    • cloud-init  
+    • VPC Proxy (proxy in general)  
+    • Transit VPC  
+    • OPworks Chef  
+    • Mention of VPN usually  
+    • Cron job  
 
 ### VPC 
 
