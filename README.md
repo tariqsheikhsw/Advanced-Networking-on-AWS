@@ -156,11 +156,10 @@ accounts, AWS Regions, and VPCs to support different connectivity patterns.
 
 ###  List of Topics :
 
-### Load Balancers (Know how Load Balancers work in more detail. This is an area one could definitely emphasize studying)
+### Load Balancers
 
 
-
-    • Configuring Load Balancers (Know Load Balancer Target groups including Cross Zone Load Balancing (the target group attributes selection for Cross-zone load balancing must be set as on)and Registering Targets)  
+   •  Configuring Load Balancers (Know Load Balancer Target groups including Cross Zone Load Balancing (the target group attributes selection for Cross-zone load balancing must be set as on)and Registering Targets)  
    •  ALB Listeners are processes that check for connection requests, using the protocol and port that you configure  
    •  ALB Target Groups are definitely an area to review for this exam. They are used to route requests to one or more registered registered targets. These are very useful in configuring ALBs  
    • Learn how to set up encryption end to end for a Load Balancer, configuring the certificates, listeners and target groups  
