@@ -158,17 +158,20 @@ accounts, AWS Regions, and VPCs to support different connectivity patterns.
 
 ### Load Balancers (Know how Load Balancers work in more detail. This is an area one could definitely emphasize studying)
 
-    • Configuring Load Balancers (Know Load Balancer Target groups including Cross Zone Load Balancing (the target group attributes selection for Cross-zone load balancing must be set as on)and Registering Targets)
-   •  ALB Listeners are processes that check for connection requests, using the protocol and port that you configure
-   •  ALB Target Groups are definitely an area to review for this exam. They are used to route requests to one or more registered registered targets. These are very useful in configuring ALBs
-   • Learn how to set up encryption end to end for a Load Balancer, configuring the certificates, listeners and target groups
-   •  For Sticky Sessions, one must update the Target Group attributes and set the Stickiness type to select a Load balancer generated cookie
-   •  Study that when wanting to use a unique random session key to provide additional safeguards against the eavesdropping of encrypted data for a Load Balancer, this will involve the Perfect Forward Secrecy
-   •  With respect to Network Load Balancer or a Application Load Balancer, a security policy update involves the their listeners. This might involve creating an ALB https listener or an NLB TLS listener
-   •  Understand the actual use of Gateway Load Balancers which enable you to deploy, scale, and manage virtual appliances, such as firewalls, intrusion detection and prevention systems, and deep packet inspection systems
-    • Path-based and host-based routing capabilities can only be handled by Application Load Balancers (not Network Load Balancers)
-    •  A load balancer should be configured to use TCP so the SSL/TLS connection can be passed through and terminated to the underlying EC2 instances. This ensures end to end encryption
-    • SSL/TLS automatically terminates
+
+
+    • Configuring Load Balancers (Know Load Balancer Target groups including Cross Zone Load Balancing (the target group attributes selection for Cross-zone load balancing must be set as on)and Registering Targets)  
+   •  ALB Listeners are processes that check for connection requests, using the protocol and port that you configure  
+   •  ALB Target Groups are definitely an area to review for this exam. They are used to route requests to one or more registered registered targets. These are very useful in configuring ALBs  
+   • Learn how to set up encryption end to end for a Load Balancer, configuring the certificates, listeners and target groups  
+   •  For Sticky Sessions, one must update the Target Group attributes and set the Stickiness type to select a Load balancer generated cookie  
+   •  Study that when wanting to use a unique random session key to provide additional safeguards against the eavesdropping of encrypted data for a Load Balancer, this will involve the Perfect Forward Secrecy  
+   •  With respect to Network Load Balancer or a Application Load Balancer, a security policy update involves the their listeners. This might involve creating an ALB https listener or an NLB TLS listener  
+   •  Understand the actual use of Gateway Load Balancers which enable you to deploy, scale, and manage virtual appliances, such as firewalls, intrusion detection and prevention systems, and deep packet inspection systems  
+    • Path-based and host-based routing capabilities can only be handled by Application Load Balancers (not Network Load Balancers)  
+    •  A load balancer should be configured to use TCP so the SSL/TLS connection can be passed through and terminated to the underlying EC2 instances. This ensures end to end encryption  
+    • SSL/TLS automatically terminates  
+    
 
   
 
