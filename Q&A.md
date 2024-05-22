@@ -27,7 +27,28 @@ DX with VGW/DXGW/TGW
 - Direct Connect with Direct Connect Gateway
 - Direct Connect with Transit Gateway (TGW)
 
+# Two VPCs connected by VPC peering and VGW , which one takes preference
+preference for routing traffic depends on the specific route tables configured in the VPCs
 
+# VGW is transitive ?
+by default, no . can be done though ( BGP Route Reflector : to break the rules)
+
+# VGW supports 
+IKE and IKEv2 (both)
+
+# S3 Gateway Endpoint , Interface EndPoint 
+Interface EndPoint : Private link, VPN , DX etc. 
+
+# VGW connecting to multiple on-prem sites ?
+Each VPN connection or Direct Connect connection is associated with the same VGW in AWS.
+- Branch Office 1: Connects to AWS via VPN Connection 1.
+- Branch Office 2: Connects to AWS via VPN Connection 2.
+- HQ Office: Connects to AWS via Direct Connect Connection 1.
+
+   
+# Jumbo Frame , Regular MTU 1500 
+- Jumbo Frames : can use b/w vpcs in same region or ec2 instances
+- Jumbo Frames : can't just if going to internet
 
 
 
