@@ -50,6 +50,6 @@ Each VPN connection or Direct Connect connection is associated with the same VGW
 - Jumbo Frames : can use b/w vpcs in same region or ec2 instances
 - Jumbo Frames : can't just if going to internet
 
-
+//03:02
 
 
