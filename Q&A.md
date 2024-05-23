@@ -85,7 +85,10 @@ Each VPN connection or Direct Connect connection is associated with the same VGW
 
 
 # Multicast Routing & Network ACL (NACL)
-- x
-- x
-- x
-- x
+- Multicast over GRE tunnel (b/w AWS and Azure Cloud etc.)
+
+# VPN 
+- Transit Gateway with Global Accelerator (not with VGW)
+-
+-
+
