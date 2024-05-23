@@ -89,6 +89,18 @@ Each VPN connection or Direct Connect connection is associated with the same VGW
 
 # VPN 
 - Transit Gateway with Global Accelerator (not with VGW)
--
--
+- Major VPN provider , can use single core only (system with 128 cores) - Application works better with high cpu limit // (May be in past need to check support)
+- IPSec vs TLS
+- VGW only has S2S VPN support
+- FQDN/IP
+
+# DX 
+- Cloud on RAMP : SASE solution
+- CloudOnRAMP vs DX
+
+# MISC
+- Transit Gateway Connection
+-  
+//09:06:05
+  
 
