@@ -49,7 +49,29 @@ Each VPN connection or Direct Connect connection is associated with the same VGW
 # Jumbo Frame , Regular MTU 1500 
 - Jumbo Frames : can use b/w vpcs in same region or ec2 instances
 - Jumbo Frames : can't just if going to internet
+- TCP/UDP : is controlled by Application, JF is agnostic of TCP/UDP traffic (retransmissions)
+- Broadcast limit : 1000 (EC2 or machines) per subnet
+- We don't use JF for voice/video traffic (RTP) etc.
 
-//03:02
+
+# VXLAN
+- Layer3 (used to encapsulate Layer2 packets)
+- Underlay
+- VXLAN extends Layer 2 networks over Layer 3 infrastructure, making it a technology that functions at both the Data Link and Network layers of the OSI model.
+
+# Crypto 
+- Public key / Private Key
+- Confidentiality / Integrity (difference in public private key used for encrypt or decrypt etc.)
+- Confidentiality : Public key encrypts , Private key decrypts
+- Integrity : Private key encrypts, Public key decrypts
+
+# SD-WAN (CISCO)
+- Orchestration Layer/Control Plane
+- Control Plane: vSmart
+- Data Plane: vEdge/cEdge Routers
+- Management Plane: vManage
+
+# abc
+- abc
 
 
