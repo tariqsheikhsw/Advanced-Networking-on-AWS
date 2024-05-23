@@ -80,6 +80,8 @@ Each VPN connection or Direct Connect connection is associated with the same VGW
 - Transit Gateway Connect is a powerful feature for organizations looking to integrate their on-premises SD-WAN solutions with AWS
 - CloudWAN
 - Use Cases: Use Transit Gateway Connect if your primary goal is to extend SD-WAN capabilities into AWS. Choose CloudWAN if you need a unified management solution for a diverse and complex network spanning multiple environments.
+- AWS Transit Gateway is a regional resource.
+- Peer 2 transit gateways in 2 VPCs (Peer Connection) 
 
 
 # Multicast Routing & Network ACL (NACL)
