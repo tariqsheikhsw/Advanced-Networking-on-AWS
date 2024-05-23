@@ -71,7 +71,19 @@ Each VPN connection or Direct Connect connection is associated with the same VGW
 - Data Plane: vEdge/cEdge Routers
 - Management Plane: vManage
 
-# abc
-- abc
+# AWS Transit Gateway
+- VPCs are not transitive (VPC peering) , unless you use Transit Gateway or CloudHub
+- VGW : one vpc , edge router (VPN, DX)
+- TGW : multiple vpcs across regions, edge case also 
+- TGW (hub and spoke) vs VPC Peering (fully meshed)
+- TGW (think of BGP Route Reflector)
+- Transit Gateway Connect is a powerful feature for organizations looking to integrate their on-premises SD-WAN solutions with AWS
+- CloudWAN
+- Use Cases: Use Transit Gateway Connect if your primary goal is to extend SD-WAN capabilities into AWS. Choose CloudWAN if you need a unified management solution for a diverse and complex network spanning multiple environments.
 
 
+# Multicast Routing & Network ACL (NACL)
+- x
+- x
+- x
+- x
