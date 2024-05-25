@@ -97,10 +97,13 @@ Each VPN connection or Direct Connect connection is associated with the same VGW
 # DX 
 - Cloud on RAMP : SASE solution
 - CloudOnRAMP vs DX
+- can we have 2 direct connect gateways in 2 regions : YES
+- DX gateway is Global resource
+- TGW infront of DXGW
+
 
 # MISC
 - Transit Gateway Connection
--  
-//09:06:05
+
   
 
