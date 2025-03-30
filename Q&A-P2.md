@@ -1,6 +1,5 @@
-*
-ANS-C01 Domain 1: Network Design (30%)
-Task Statement 1.1: Design a solution that incorporates edge network services to optimize user performance and traffic management for global architectures.
+### ANS-C01 Domain 1: Network Design (30%)
+#### Task Statement 1.1: Design a solution that incorporates edge network services to optimize user performance and traffic management for global architectures.
 
 Knowledge of:
 
