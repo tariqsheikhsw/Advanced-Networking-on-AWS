@@ -1,3 +1,7 @@
+### ANS-C01 Q&A Part2
+
+# Static Vs Dynamic Routing
+
 ### Dynamic Routing
 
 Type of routing to use in Site-to-Site VPN if your Customer Gateway device supports Border Gateway Protocol (BGP)
