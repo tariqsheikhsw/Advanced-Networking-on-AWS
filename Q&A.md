@@ -1,6 +1,6 @@
 ### ANS-C01 Q/A
 
-# VGW and IGW 
+# VGW and IGW
 
 IGW : Internet  
 VGW : VPN Consolidation (S2S VPNs aggregation) : Branch Office
