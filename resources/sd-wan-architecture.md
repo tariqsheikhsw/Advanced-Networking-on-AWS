@@ -1,8 +1,4 @@
-https://aws.amazon.com/blogs/networking-and-content-delivery/simplify-sd-wan-connectivity-with-aws-transit-gateway-connect/
 
-https://aws.amazon.com/blogs/networking-and-content-delivery/integrate-sd-wan-devices-with-aws-transit-gateway-and-aws-direct-connect/
-
-https://community.cisco.com/t5/networking-knowledge-base/cisco-sd-wan-cloud-hosting-with-aws-cloud-services-v1-part/ta-p/4728160
 
 ### SD-WAN Appliance : Dedicated VPC / Subnet 
 
